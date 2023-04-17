@@ -58,9 +58,10 @@ svg {
   --name-ff: 'Shadows Into Light', cursive;
 
   /* colors */
+  --black: rgb(0, 0, 0);
   --bg-dark: rgb(16, 16, 16);
-  --bg-less-dark: rgb(16, 16, 16);
-  --accent: hsl(222, 71%, 59%);
+  --bg-less-dark: rgb(25, 25, 25);
+  --accent: rgb(73, 152, 254);
   --text1: hsl(0, 0%, 100%);
   --text2: hsl(0, 0%, 85%);
   --invalid: hsl(7, 100%, 68%);
@@ -86,8 +87,8 @@ svg {
 
 
 body {
-  background-color: white;
-  color: rgb(73, 152, 254);
+  background-color: var(--bg-dark);
+  color: #06bee1;
 
 }
 
