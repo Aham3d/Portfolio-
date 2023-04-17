@@ -25,7 +25,7 @@ html:focus-within {
 }
 
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 /* Set core body defaults */
@@ -56,12 +56,17 @@ svg {
   --headings-ff: 'headings';
   --headings-bold-ff: 'headings-bold';
   --name-ff: 'Shadows Into Light', cursive;
+
+  /* colors */
+  --bg-dark: rgb(16, 16, 16);
+  --bg-less-dark: rgb(16, 16, 16);
+  --accent: hsl(222, 71%, 59%);
+  --text1: hsl(0, 0%, 100%);
+  --text2: hsl(0, 0%, 85%);
+  --invalid: hsl(7, 100%, 68%);
   
   
 }
-  
-  
-
 
 
 @font-face {
@@ -77,4 +82,15 @@ svg {
 @font-face {
   font-family: headings-bold;
   src: url(fonts/MonumentExtended-Ultrabold.otf);
+}
+
+
+body {
+  background-color: white;
+  color: rgb(73, 152, 254);
+
+}
+
+img {
+  color: rgb(73, 152, 254);
 }
