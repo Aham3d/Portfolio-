@@ -1,5 +1,7 @@
 /* RESET */
 /* Box sizing rules */
+
+
 *,
 *::before,
 *::after {
@@ -14,9 +16,9 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul {
   list-style: none;
+  text-decoration: none;
 }
 
 /* Set core root defaults */
@@ -39,6 +41,10 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+a {
+  cursor: none;
+}
+
 /* Make images easier to work with */
 img,
 picture, 
@@ -46,9 +52,37 @@ svg {
   max-width: 100%;
   display: block;
 }
+
+h1,
+h2,
+h3,
+p {
+  margin-block-start: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text1);
+  line-height: 1.56;
+  /* padding: 0 12rem; */
+  font-family: var(--regular-ff);
+  height: 100vh;
+  overflow-x: hidden;
+  cursor: none;
+
+}
+
+
 /* RESET */
 
-
+/*  var  */
 :root {
 
   /* fonts */
@@ -61,12 +95,13 @@ svg {
   --black: rgb(0, 0, 0);
   --bg-dark: rgb(16, 16, 16);
   --bg-less-dark: rgb(25, 25, 25);
-  --accent: rgb(73, 152, 254);
-  --text1: hsl(0, 0%, 100%);
-  --text2: hsl(0, 0%, 85%);
-  --invalid: hsl(7, 100%, 68%);
-  
-  
+  --accent: #ff006a;
+  --text1: rgb(255, 255, 255);
+  --text2: rgb(225, 225, 225);
+  --invalid: rgb(73, 152, 254);
+  --gray: rgb(180, 180, 180);
+  --extra: #fde800;
+
 }
 
 
@@ -85,13 +120,245 @@ svg {
   src: url(fonts/MonumentExtended-Ultrabold.otf);
 }
 
+/* UTILITIES */
+.flex {
+  display: flex;
+  align-items: center;
+}
 
-body {
-  background-color: var(--bg-dark);
-  color: #06bee1;
+.column {
+  flex-direction: column;
+}
+
+
+/* header */
+header {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 5rem;
+  z-index: 1;
+  padding: 0 12rem;
+  /* border-bottom: 1px solid var(--text2); */
+}
+
+.logo-con a {
+  text-decoration: none;
+  list-style: none;
+  color: var(--text1);
+  font-family: var(--name-ff);
+  font-weight: 700;
+  font-size: 23px;
+}
+
+.nav-links {
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text1);
+  font-family: var(--headings-ff); 
+  text-decoration: none;
+  list-style: none;
+}
+
+.hover-links {
+  transition: all .2s ease;
+}
+.hover-links:hover {
+  color: var(--accent);
+}
+.hover-links {
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.hover-links:hover, .hover-links:focus, .hover-links:active {
+  transform: translateY(-4px);
+}
+
+.socials-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+} 
+
+.social-g:hover {
+  filter: invert(88%) sepia(100%) saturate(4296%) hue-rotate(350deg) brightness(97%) contrast(70%);
+}
+
+.social-t:hover {
+  filter: invert(88%) sepia(100%) saturate(4296%) hue-rotate(350deg) brightness(97%) contrast(70%);
+}
+
+
+.socials-con .social-t {
+  margin-top: 2px;
+}
+
+
+/* main */
+
+main {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  /* display: fl; */
+  margin: 9rem 0; 
+  font-size: 3rem;
+  padding: 0 12rem;
+  /* border-bottom: 1px double var(--text1); */
+}
+
+.img-container {
+  display: flex;
 
 }
 
-img {
-  color: rgb(73, 152, 254);
+.img {
+  width: 10rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+  transition-property: transform;
+}
+
+.img:hover, .img:focus, .img:active {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* .img-bg {
+  position: absolute;
+  top: 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
+} */
+
+
+.name {
+  font-family: var(--name-ff);
+  color: var(--accent);
+}
+
+.regular {
+  font-family: var(--regular-ff);
+}
+
+main p {
+  font-family: var(--headings-ff);
+  display: flex;
+  align-items: center;
+  text-transform: ;
+}
+
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+main .w {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+main .w:hover, main .w:focus, main .w:active {
+  -webkit-animation-name: hvr-wobble-vertical;
+  animation-name: hvr-wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  color: var(--accent);
+}
+
+.curve-line {
+  width: 200%;
+  height: 1rem;
+  filter: invert(34%) sepia(40%) saturate(4619%) hue-rotate(335deg) brightness(107%) contrast(98%);
+}
+
+/* .things {
+  position: relative;
+} */
+
+.right-side {
+  position: relative;
+  font-family: var(--headings-ff);
+  font-size: 18rem;
+  transform: rotate(90deg);
+  left: 40rem;
+  top: -18rem;
+  color: var(--text2);
+  opacity: 3%;
+  z-index: -1;
+}
+
+.left-side {
+  position: relative;
+  font-family: var(--headings-ff);
+  font-size: 18rem;
+  transform: rotate(90deg);
+  right: 42rem;
+  top: -18rem;
+  color: var(--text2);
+  opacity: 3%;
+  z-index: -1;
 }
