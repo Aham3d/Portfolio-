@@ -76,6 +76,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   cursor: none;
+  padding-bottom: 100rem;
 
 }
 
@@ -200,13 +201,12 @@ header {
 
 
 /* main */
-
 main {
   justify-content: space-around;
   align-content: center;
   text-align: center;
   align-items: center;
-  margin: 8rem 0; 
+  margin: 10rem 0; 
   padding: 0 8rem;
   /* border-bottom: 1px double var(--text1); */
   margin-bottom: 16rem;
@@ -229,15 +229,14 @@ main p {
   font-size: 1rem;
 }
 
-/* .img-bg {
+.img-bg {
   position: absolute;
-  top: 11rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 15rem;
+  top: 8rem;
+  right: 9rem;
+  width: 6rem;
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
-} */
+  transform: rotate(280deg);
+}
 
 
 .name {
@@ -366,24 +365,126 @@ main .w:hover, main .w:focus, main .w:active {
   transform: scaleX(1);
 }
 
-
 .img {
+  position: relative;
   width: 16rem;
   border-radius: 50%;
   /* margin-bottom: 1rem; */
   z-index: 1;
   transition: all 0.4s ease-in-out;
+  left: -50px;
 }
 
 .img:hover, .img:focus, .img:active {
   transform: scale(1.2) rotate(5deg);
 }
 
+/* curve lines */
 .curve-line {
   width: 100%;
   height: 1rem;
   filter: invert(34%) sepia(40%) saturate(4619%) hue-rotate(335deg) brightness(107%) contrast(98%);
 }
+
+/* tech section */
+.tech {
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
+.tech-header {
+  align-items: center;
+  justify-content: center ;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+
+.tech-title {
+  font-family: var(--headings-ff);
+  font-size: 4rem;
+}
+
+.sub-title-con {
+  display: flex;
+  width: 20rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--accent);
+}
+
+.lines {
+  height: 1px;
+  width: 30px;
+  /* content: ""; */
+  background-color: #00ff88;
+  position: relative;
+
+}
+
+.sub-title {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+}
+
+.tech-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tech-stack img {
+  width: 6rem;
+
+}
+
+.html:hover {
+  filter: invert(66%) sepia(61%) saturate(7396%) hue-rotate(353deg) brightness(151%) contrast(89%);  
+}
+.css:hover {
+  filter: invert(20%) sepia(61%) saturate(2461%) hue-rotate(195deg) brightness(95%) contrast(106%);
+}
+.js:hover {
+  filter: invert(90%) sepia(80%) saturate(5567%) hue-rotate(35deg) brightness(159%) contrast(106%);
+}
+.sass:hover {
+  filter: invert(99%) sepia(88%) saturate(6053%) hue-rotate(301deg) brightness(85%) contrast(84%);
+}
+.github:hover {
+  filter: invert(100%) sepia(100%) saturate(20%) hue-rotate(265deg) brightness(98%) contrast(98%);
+}
+.firebase:hover {
+  filter: invert(81%) sepia(72%) saturate(3143%) hue-rotate(356deg) brightness(105%) contrast(99%);
+}
+
+.bounce {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+}
+.bounce {
+  transform: translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.bounce:hover, .bounce:focus, .bounce:active {
+  transform: scale(1.5);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+
+/* projects section */
+
+
 
 /* .things {
   position: relative;
