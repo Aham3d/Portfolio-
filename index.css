@@ -483,7 +483,51 @@ main .w:hover, main .w:focus, main .w:active {
 
 
 /* projects section */
+.projects {
+  padding: 0 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin-top: 10rem;
+}
 
+.project-header {
+  align-items: center;
+  justify-content: center ;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.project-title {
+  font-family: var(--headings-ff);
+  font-size: 4rem;
+}
+
+.sub-title-con {
+  display: flex;
+  width: 20rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--accent);
+}
+
+.lines {
+  height: 1px;
+  width: 30px;
+  /* content: ""; */
+  background-color: #00ff88;
+  position: relative;
+
+}
+
+.project-sub-title {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
 
 
 /* .things {
