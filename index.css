@@ -124,6 +124,7 @@ body {
 .flex {
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .column {
@@ -202,34 +203,28 @@ header {
 /* main */
 
 main {
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   text-align: center;
   align-items: center;
-  /* display: fl; */
-  margin: 9rem 0; 
+  margin: 8rem 0; 
   font-size: 3rem;
   padding: 0 12rem;
   /* border-bottom: 1px double var(--text1); */
+  margin-bottom: 15rem;
 }
 
-.img-container {
+.left-con {
   display: flex;
-
+  flex-direction: column;
+  text-align: left;
+  /* line-height: 5rem; */
 }
 
-.img {
-  width: 10rem;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  z-index: 1;
-  transition: all 0.4s ease-in-out;
-  transition-property: transform;
+.left-con p {
+  /* line-height: 4rem; */
 }
 
-.img:hover, .img:focus, .img:active {
-  transform: scale(1.2) rotate(5deg);
-}
 
 /* .img-bg {
   position: absolute;
@@ -245,17 +240,17 @@ main {
 .name {
   font-family: var(--name-ff);
   color: var(--accent);
-}
-
-.regular {
-  font-family: var(--regular-ff);
+  margin-bottom: 12px;
+  margin-left: 15px;
+  
 }
 
 main p {
   font-family: var(--headings-ff);
   display: flex;
   align-items: center;
-  text-transform: ;
+  text-transform: uppercase;
+  align-items: center;
 }
 
 @-webkit-keyframes hvr-wobble-vertical {
@@ -329,8 +324,66 @@ main .w:hover, main .w:focus, main .w:active {
   color: var(--accent);
 }
 
+.contact-btn  {
+  width:  10rem;
+  padding: 9px;
+  font-size: 18px;
+  border: none;
+  transition-duration: 0.5s;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  background-color: white;
+  color: var(--bg-dark);
+  text-align: center;
+  text-decoration: none;
+  margin-top: 18px;
+}
+
+.contact-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  /* transition-property: transform; */
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+.contact-btn:hover, .contact-btn:focus, .contact-btn:active {
+  color: white;
+  transform: scaleX(1);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.contact-btn:hover:before, .contact-btn:focus:before, .contact-btn:active:before {
+  transform: scaleX(1);
+}
+
+
+.img-container {
+  display: flex;
+
+}
+
+.img {
+  width: 18rem;
+  border-radius: 50%;
+  /* margin-bottom: 1rem; */
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+  transition-property: transform;
+}
+
+.img:hover, .img:focus, .img:active {
+  transform: scale(1.2) rotate(5deg);
+}
+
 .curve-line {
-  width: 200%;
+  width: 100%;
   height: 1rem;
   filter: invert(34%) sepia(40%) saturate(4619%) hue-rotate(335deg) brightness(107%) contrast(98%);
 }
@@ -338,7 +391,7 @@ main .w:hover, main .w:focus, main .w:active {
 /* .things {
   position: relative;
 } */
-
+/* 
 .right-side {
   position: relative;
   font-family: var(--headings-ff);
@@ -361,4 +414,4 @@ main .w:hover, main .w:focus, main .w:active {
   color: var(--text2);
   opacity: 3%;
   z-index: -1;
-}
+} */
