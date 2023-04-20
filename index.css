@@ -95,7 +95,7 @@ body {
   --black: rgb(0, 0, 0);
   --bg-dark: rgb(16, 16, 16);
   --bg-less-dark: rgb(25, 25, 25);
-  --accent: #ff006a;
+  --accent: #00ff88;
   --text1: rgb(255, 255, 255);
   --text2: rgb(225, 225, 225);
   --invalid: rgb(73, 152, 254);
@@ -124,7 +124,7 @@ body {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .column {
@@ -134,12 +134,11 @@ body {
 
 /* header */
 header {
-  justify-content: space-between;
   align-items: center;
   text-align: center;
   height: 5rem;
   z-index: 1;
-  padding: 0 12rem;
+  padding: 0 8rem;
   /* border-bottom: 1px solid var(--text2); */
 }
 
@@ -208,10 +207,9 @@ main {
   text-align: center;
   align-items: center;
   margin: 8rem 0; 
-  font-size: 3rem;
-  padding: 0 12rem;
+  padding: 0 8rem;
   /* border-bottom: 1px double var(--text1); */
-  margin-bottom: 15rem;
+  margin-bottom: 16rem;
 }
 
 .left-con {
@@ -221,10 +219,15 @@ main {
   /* line-height: 5rem; */
 }
 
-.left-con p {
-  /* line-height: 4rem; */
+main p {
+  font-family: var(--headings-ff);
+  /* display: flex; */
+  align-items: center;
 }
 
+.left-con p {
+  font-size: 1rem;
+}
 
 /* .img-bg {
   position: absolute;
@@ -240,18 +243,18 @@ main {
 .name {
   font-family: var(--name-ff);
   color: var(--accent);
-  margin-bottom: 12px;
-  margin-left: 15px;
-  
+  /* margin-bottom: 6px; */
+  font-weight: bold;
+  /* margin-left: 15px; */
+  letter-spacing: 6px;
+  font-size: 4rem;
 }
 
-main p {
-  font-family: var(--headings-ff);
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  align-items: center;
+.title {
+  font-size: 4rem;
+  margin-top: -1.5rem;
 }
+
 
 @-webkit-keyframes hvr-wobble-vertical {
   16.65% {
@@ -364,18 +367,12 @@ main .w:hover, main .w:focus, main .w:active {
 }
 
 
-.img-container {
-  display: flex;
-
-}
-
 .img {
-  width: 18rem;
+  width: 16rem;
   border-radius: 50%;
   /* margin-bottom: 1rem; */
   z-index: 1;
   transition: all 0.4s ease-in-out;
-  transition-property: transform;
 }
 
 .img:hover, .img:focus, .img:active {
