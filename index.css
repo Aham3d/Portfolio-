@@ -76,7 +76,6 @@ body {
   height: 100vh;
   overflow-x: hidden;
   cursor: none;
-  padding-bottom: 300rem;
 
 }
 
@@ -162,6 +161,11 @@ header {
   font-size: 23px;
 }
 
+.logo:hover, .logo-con:hover {
+  transform: scale(1.5) rotate(10deg);
+  color: var(--accent);
+}
+
 .nav-links {
   gap: 20px;
 }
@@ -197,11 +201,11 @@ header {
 } 
 
 .social-g:hover {
-  filter: invert(88%) sepia(100%) saturate(4296%) hue-rotate(350deg) brightness(97%) contrast(70%);
+  filter: invert(81%) sepia(35%) saturate(3867%) hue-rotate(180deg) brightness(180%) contrast(106%);
 }
 
 .social-t:hover {
-  filter: invert(88%) sepia(100%) saturate(4296%) hue-rotate(350deg) brightness(97%) contrast(70%);
+  filter: invert(81%) sepia(35%) saturate(3867%) hue-rotate(180deg) brightness(180%) contrast(106%);
 }
 
 
@@ -218,8 +222,6 @@ main {
   align-items: center;
   margin: 10rem 0; 
   padding: 0 8rem;
-  /* border-bottom: 1px double var(--text1); */
-  margin-bottom: 16rem;
 }
 
 .connect {
@@ -402,26 +404,17 @@ main .w:hover, main .w:focus, main .w:active {
   transform: scaleX(1);
 }
 
-.img {
-  position: relative;
-  width: 16rem;
-  border-radius: 50%;
-  /* margin-bottom: 1rem; */
-  z-index: 1;
-  transition: all 0.4s ease-in-out;
-  left: -50px;
-}
-
-.img:hover, .img:focus, .img:active {
+/* .img:hover, .img:focus, .img:active {
   transform: scale(1.2) rotate(5deg);
+} */
+
+.marq {
+  position: absolute;
+  font-size: 6.7rem;
+  font-family: var(--name-ff);
+  opacity: 0.6%;
 }
 
-/* curve lines */
-.curve-line {
-  width: 100%;
-  height: 1rem;
-  filter: invert(34%) sepia(40%) saturate(4619%) hue-rotate(335deg) brightness(107%) contrast(98%);
-}
 
 /* tech section */
 .tech {
@@ -619,13 +612,13 @@ main .w:hover, main .w:focus, main .w:active {
 
 .project-github-icon {
   width: 2rem;
-  filter: invert(20%) sepia(61%) saturate(2461%) hue-rotate(195deg) brightness(95%) contrast(106%);
+  filter: invert(81%) sepia(35%) saturate(3867%) hue-rotate(180deg) brightness(180%) contrast(106%);
 
 }
 
 .project-live-icon {
   width: 1.8rem;
-  filter: invert(20%) sepia(61%) saturate(6661%) hue-rotate(195deg) brightness(95%) contrast(126%);
+  filter: invert(80%) sepia(10%) saturate(5061%) hue-rotate(450deg) brightness(95%) contrast(106%);
 
 }
 
@@ -645,6 +638,7 @@ main .w:hover, main .w:focus, main .w:active {
   display: flex;
   justify-content: space-between;
   margin-top: 13rem;
+  padding-bottom: 5rem;
 }
 
 .smile-con {
@@ -764,11 +758,30 @@ main .w:hover, main .w:focus, main .w:active {
   width: 100%;
   background-color: white;
   transition: all .2s ease-in-out;
-
+  cursor: none;
 }
 
 .send-button:hover {
   background-color: yellow;
+}
+
+/* footer */
+footer {
+  padding: 1rem;
+  background-color: var(--accent);
+  font-family: var(--regular-ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--bg-dark);
+}
+
+footer span {
+  font-family: var(--name-ff);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 
