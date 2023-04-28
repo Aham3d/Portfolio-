@@ -11,6 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+      emailjs.init("ucfpeHSC7N1PnFyhw");
+    })();
+    </script>
 
     <title>Moin Ahamed | Portfolio</title>
 
@@ -207,7 +215,9 @@
             </div>
           </div>
 
-      </div>
+          <div class="code-message">
+              <p> CODE of TODO list , TWITTER-YOUTUBE landing pages on <span> <a href="">GITHUB</a></span></p>
+          </div>
         
     </section>
 
@@ -235,7 +245,7 @@
           <input required type="text" id="name" placeholder="name" >
           <input required type="email" placeholder="email" id="email" name="email" required>
           <textarea required id="message" type="text" rows="5" name="message" placeholder="Message"></textarea>
-          <button type="submit" class="send-button"  id="submit-button">Register</button>
+          <button  type="submit" class="send-button"  id="submit-button">Register</button>
         </form>
       </div>
 
@@ -253,7 +263,7 @@
       class="goo"
       version="1.1"
       width="100%"
-    >
+      >
       <defs>
         <filter id="goo">
           <feGaussianBlur

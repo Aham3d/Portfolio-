@@ -51,10 +51,10 @@ initCursor();
 updateCursor();
 
 // FORM VALIDATION
-const form = document.querySelector('#form');
-const nameInput = document.querySelector('#name');
-const emailInput = document.querySelector('#email');
-const messageInput = document.querySelector('#message');
+const form = document.querySelector("#form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#message");
 
 const namePattern = /^[a-zA-Z]{3,}$/;
 const emailPattern = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/;
@@ -64,14 +64,38 @@ function validateForm(event) {
   event.preventDefault();
   let isValid = true;
   if (isValid) {
-    console.log('Message sent');
+    console.log("Message sent");
     console.log(nameInput.value);
     console.log(emailInput.value);
     console.log(messageInput.value);
     form.reset();
+    alert("recieved your message. will get back to you soon");
+
   } else {
-    console.log('message not sent');
+    console.log("message not sent");
   }
 }
 
-form.addEventListener('submit', validateForm);
+form.addEventListener("submit", validateForm);
+
+// form to email
+function sendMail() {
+  var parms = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("mail").value,
+    message: document.getElementById("message").valye,
+  };
+  const serviceId = "service_lrorpwf";
+  const templateId = "template_hg2gg6d";
+
+  emailjs
+    .send(serviceId, templateId, parms)
+    .then((res) => {
+      document.getElementById("name").value = "";
+      document.getElementById("mail").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("message sent");
+    })
+    .catch((err) => console.log(err));
+}
