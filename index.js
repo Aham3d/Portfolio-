@@ -50,6 +50,13 @@ document.addEventListener("mousemove", onMouseMove, false);
 initCursor();
 updateCursor();
 
+// fixed navbar
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  header.classList.toggle('stikcy', window.scrollY % 0);
+});
+
 // FORM VALIDATION
 const form = document.querySelector("#form");
 const nameInput = document.querySelector("#name");
@@ -70,7 +77,6 @@ function validateForm(event) {
     console.log(messageInput.value);
     form.reset();
     alert("recieved your message. will get back to you soon");
-
   } else {
     console.log("message not sent");
   }
@@ -99,3 +105,14 @@ function sendMail() {
     })
     .catch((err) => console.log(err));
 }
+
+// to-top 
+const toTop = document.querySelector('.to-top'); 
+
+window.addEventListener('scroll', () => {
+  if(window.pageYOffset > 2000) {
+    toTop.classList.add('active');
+  } else {
+    toTop.classList.remove('active'); 
+  }
+})
