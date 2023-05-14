@@ -215,10 +215,62 @@ header {
   filter: invert(81%) sepia(35%) saturate(3867%) hue-rotate(180deg) brightness(180%) contrast(106%);
 }
 
-
 .socials-con .social-t {
   margin-top: 2px;
+
 }
+
+.connect {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(340deg);
+  top: 10rem;
+  right: 10rem;
+  transition: all .2s ease-in-out;
+}
+
+.connect img {
+  width: 15rem;
+  filter: invert(60%) sepia(5%) saturate(6667%) hue-rotate(5deg) brightness(159%) contrast(106%);
+
+}
+
+.connect p {
+  position: absolute;
+  align-items: center;
+  font-family: var(--headings-ff);
+  font-size: 14px;
+  color: var(--bg-dark);
+}
+
+.connect-bg {
+  position: fixed;
+  top: 6rem;
+  right: 9rem;
+  width: 5rem;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
+  transform: rotate(280deg);
+  z-index: -1;
+  transition: all .2s ease-in-out;
+}
+
+.connect.connect-pos {
+  transform: rotate(77deg);
+  top: 13rem;
+  right: -3rem;
+
+}
+
+.connect-bg.connect-bg-pos {
+  top: 5rem;
+  right: 4rem;
+  transform: rotate(225deg);
+
+}
+
+
 
 
 /* main */
@@ -231,32 +283,6 @@ main {
   padding: 0 8rem;
 }
 
-.connect {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: -27rem;
-  top: -3rem;
-  transform: rotate(340deg);
-  position: relative;
-}
-
-.connect img {
-  display: inline;
-  position: absolute;
-  width: 15rem;
-  filter: invert(60%) sepia(5%) saturate(6667%) hue-rotate(5deg) brightness(159%) contrast(106%);
-
-}
-
-.connect p {
-  display: inline;
-  position: absolute;
-  align-items: center;
-  font-family: var(--headings-ff);
-  font-size: 14px;
-  color: var(--bg-dark);
-}
 
 .left-con {
   display: flex;
@@ -275,14 +301,6 @@ main p {
   font-size: 1rem;
 }
 
-.img-bg {
-  position: absolute;
-  top: 6rem;
-  right: 9rem;
-  width: 5rem;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
-  transform: rotate(280deg);
-}
 
 
 .name {
@@ -414,16 +432,6 @@ main .w:hover, main .w:focus, main .w:active {
 /* .img:hover, .img:focus, .img:active {
   transform: scale(1.2) rotate(5deg);
 } */
-
-.marq {
-  position: absolute;
-  font-size: 6.7rem;
-  font-family: var(--name-ff);
-  opacity: 3%;
-  line-height: 10px;
-  top: 53rem;
-}
-
 
 /* tech section */
 .tech {
@@ -703,6 +711,7 @@ main .w:hover, main .w:focus, main .w:active {
   width: 4rem;
   transform: rotate(-60deg);
   top: 2rem;
+  right: 10rem;
   filter: invert(90%) sepia(21%) saturate(5561%) hue-rotate(19deg) brightness(95%) contrast(126%);
 
 }
@@ -720,11 +729,11 @@ main .w:hover, main .w:focus, main .w:active {
 .get-in-touch img {
   padding: 0;
   position: relative;
-  top: 1rem;
-  right: -30rem;
-  width: 6rem;
+  top: 2rem;
+  right: -35rem;
+  width: 10rem;
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
-  transform: rotate(20deg);
+  transform: rotate(10deg);
 }
 
 .message {
@@ -738,8 +747,8 @@ main .w:hover, main .w:focus, main .w:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28rem;
   left: -3.2rem;
+  width: 28rem;
 }
 
 .message span p {

@@ -115,4 +115,28 @@ window.addEventListener('scroll', () => {
   } else {
     toTop.classList.remove('active'); 
   }
+});
+
+
+// connect with me 
+const connectImg = document.querySelector('.connect'); 
+
+window.addEventListener('scroll', () => {
+  if(window.pageYOffset > 1400) {
+    connectImg.classList.add('connect-pos');
+  } else {
+    connectImg.classList.remove('connect-pos'); 
+  }
+})
+
+
+// connect bg
+const connectBg = document.querySelector('.connect-bg'); 
+
+window.addEventListener('scroll', () => {
+  if(window.pageYOffset > 1400) {
+    connectBg.classList.add('connect-bg-pos');
+  } else {
+    connectBg.classList.remove('connect-bg-pos'); 
+  }
 })
