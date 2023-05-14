@@ -598,7 +598,6 @@ main .w:hover, main .w:focus, main .w:active {
   z-index: 1;
 }
 
-
 .project-name {
   text-align: right;
   font-size: 1.2rem;
@@ -686,9 +685,9 @@ main .w:hover, main .w:focus, main .w:active {
 
 /* contact */
 .contact   {
-  padding: 0 10rem;
+  padding: 0 5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 3rem;
 }
 
