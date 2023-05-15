@@ -429,8 +429,19 @@ main .w:hover, main .w:focus, main .w:active {
   transform: scaleX(1);
 }
 
-/* .img:hover, .img:focus, .img:active {
+/* .img {
+  filter: invert(10%) sepia(0%) saturate(1%) hue-rotate(65deg) brightness(80%) contrast(100%);
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+
+}
+
+.img:hover, .img:focus, .img:active {
   transform: scale(1.2) rotate(5deg);
+  filter: none;
 } */
 
 /* tech section */
@@ -906,3 +917,174 @@ html {
   opacity: 3%;
   z-index: -1;
 } */
+
+
+
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 0 2rem;
+  }
+  
+  main {
+    margin: 8rem 0;
+    padding: 0 2rem;
+  }
+  
+  .left-con {
+    text-align: center;
+  }
+  
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-top: -1rem;
+  }
+  
+  .contact-btn {
+    width: 8rem;
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  .tech {
+    padding: 0 2rem;
+  }
+  
+  .tech-title {
+    font-size: 2.5rem;
+  }
+  
+  .sub-title-con {
+    width: 15rem;
+  }
+  
+  .sub-title {
+    width: 8rem;
+  }
+  
+  .projects {
+    padding: 0 2rem;
+    margin-top: 10rem;
+  }
+  
+  .project-title {
+    font-size: 2.5rem;
+  }
+  
+  .project-sub-title {
+    width: 10rem;
+  }
+  
+  .project-left img {
+    width: 80%;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 0 4rem;
+  }
+  
+  main {
+    margin: 12rem 0;
+    padding: 0 4rem;
+  }
+  
+  .contact-btn {
+    width: 12rem;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .tech {
+    padding: 0 4rem;
+  }
+  
+  .tech-title {
+    font-size: 3rem;
+  }
+  
+  .sub-title-con {
+    width: 18rem;
+  }
+  
+  .sub-title {
+    width: 10rem;
+  }
+  
+  .projects {
+    padding: 0 4rem;
+    margin-top: 12rem;
+  }
+  
+  .project-title {
+    font-size: 3rem;
+  }
+  
+  .project-sub-title {
+    width: 12rem;
+  }
+  
+  .project-left img {
+    width: 70%;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  header {
+    padding: 0 8rem;
+  }
+  
+  main {
+    margin: 15rem 0;
+    padding: 0 8rem;
+  }
+  
+  .contact-btn {
+    width: 10rem;
+    padding: 9px;
+    font-size: 18px;
+  }
+  
+  .tech {
+    padding: 0 8rem;
+  }
+  
+  .tech-title {
+    font-size: 4rem;
+  }
+  
+  .sub-title-con {
+    width: 20rem;
+  }
+  
+  .sub-title {
+    width: 11rem;
+  }
+  
+  .projects {
+    padding: 0 10rem;
+    margin-top: 15rem;
+  }
+  
+  .project-title {
+    font-size: 4rem;
+  }
+  
+  .project-sub-title {
+    width: 14rem;
+  }
+  
+  .project-left img {
+    width: 100%;
+  }
+}
