@@ -124,7 +124,7 @@ body {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: centers;
 }
 
 .column {
@@ -275,7 +275,7 @@ header {
 
 /* main */
 main {
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
   text-align: center;
   align-items: center;
@@ -284,20 +284,22 @@ main {
 }
 
 
-.left-con {
+.main-con {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   /* line-height: 5rem; */
 }
 
 main p {
   font-family: var(--headings-ff);
-  /* display: flex; */
+  display: flex;
   align-items: center;
 }
 
-.left-con p {
+.main-con p {
   font-size: 1rem;
 }
 
@@ -431,14 +433,15 @@ main .w:hover, main .w:focus, main .w:active {
 
 
 /* tech section */
-.tech {
+.about {
   padding: 0 8rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 10rem;
+  gap: 5rem;
 }
 
-.tech-title {
+.about-title {
   font-family: var(--headings-ff);
   font-size: 4rem;
 }
@@ -467,6 +470,41 @@ main .w:hover, main .w:focus, main .w:active {
   width: 11rem;
 }
 
+.about-me-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-top p {
+  font-family: var(--regular-ff);
+}
+
+.about-top span {
+  color: var(--accent);
+}
+
+.tech-sub-title-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+  color: var(--accent);
+  
+}
+
+.tech-sub-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tech-sub-title-con .lines {
+  margin: 0 1rem;
+}
+
 .tech-stack {
   display: flex;
   align-items: center;
@@ -475,7 +513,7 @@ main .w:hover, main .w:focus, main .w:active {
 }
 
 .tech-stack img {
-  width: 5rem;
+  width: 4rem;
 
 }
 
