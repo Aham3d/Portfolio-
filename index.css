@@ -634,11 +634,15 @@ main .w:hover, main .w:focus, main .w:active {
   width: 30rem;
   background-color: var(--bg-less-dark);
   padding: 1rem;
-  text-align: right;
+  text-align: left;
   font-size: 14px;
   left: 3rem;
   position: relative;
   z-index: 1;
+}
+
+.project-left-con .project-name {
+  text-align: left;
 }
 
 .project-name {
