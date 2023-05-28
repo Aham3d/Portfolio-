@@ -433,7 +433,7 @@ main .w:hover, main .w:focus, main .w:active {
 
 /* tech section */
 .about {
-  padding: 0 8rem;
+  /* padding: 0 8rem; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -561,7 +561,6 @@ main .w:hover, main .w:focus, main .w:active {
   flex-direction: column;
   gap: 5rem;
   margin-top: 15rem;
-
 }
 
 .project-title {
@@ -952,7 +951,8 @@ html {
 
 /* Mobile Styles */
 
-@media (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 500px){
+
   header {
     padding: 3rem 5rem;
     height: 3rem;
@@ -989,12 +989,11 @@ html {
   }
 
   main {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15rem 9.3rem;
-    width: 100%; 
-
+    left: 10.5rem;
   } 
 
   .main-con {
@@ -1005,23 +1004,58 @@ html {
     align-items: center;
   }
 
+  .name {
+    font-size: 3rem;
+  }
+
   .main-con .title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 0.1rem;
   }
 
+  /* about section */
+  .about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    right: -11.2rem;
+  }
+
+  .about-title {
+    font-family: var(--headings-ff);
+    font-size: 3rem;
+  }
+
+  .projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    right: -11.1rem;
+  }
+
+  .project-title {
+    font-family: var(--headings-ff);
+    font-size: 3rem;
+  }
 }
+
 
 /* Tablet Styles */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* @media (min-width: 769px) and (max-width: 1024px) {
 
-}
+} */
 
 /* Desktop Styles */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
 
-}
+} */
 
-@media(max-width: 1200) {
+/* @media(max-width: 1200) {
 
-}
+} */
