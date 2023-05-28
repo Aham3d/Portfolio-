@@ -122,7 +122,7 @@ window.addEventListener('scroll', () => {
 const connectImg = document.querySelector('.connect'); 
 
 window.addEventListener('scroll', () => {
-  if(window.pageYOffset > 1400) {
+  if(window.pageYOffset > 50) {
     connectImg.classList.add('connect-pos');
   } else {
     connectImg.classList.remove('connect-pos'); 
@@ -134,7 +134,7 @@ window.addEventListener('scroll', () => {
 const connectBg = document.querySelector('.connect-bg'); 
 
 window.addEventListener('scroll', () => {
-  if(window.pageYOffset > 1400) {
+  if(window.pageYOffset > 50) {
     connectBg.classList.add('connect-bg-pos');
   } else {
     connectBg.classList.remove('connect-bg-pos'); 
